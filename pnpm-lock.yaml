@@ -23,6 +23,9 @@ importers:
       bcrypt:
         specifier: ^5.1.1
         version: 5.1.1
+      book_repository_backend:
+        specifier: 'link:'
+        version: 'link:'
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5

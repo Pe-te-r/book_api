@@ -27,7 +27,7 @@ export const deleteBookControl=async(c: Context)=>{
         const id =c.req.param('id')
         if(await fetchOneBook(Number(id))!= undefined){
             const result = await deleteBook(Number(id))
-            return c.json(result,204)
+            return c.json(result,200)
         }else{
             return c.json("book not found",404)
         }
@@ -35,7 +35,6 @@ export const deleteBookControl=async(c: Context)=>{
         return c.json("error deleting book",400)
     }
 }
-
 export const createBookControl=async(c: Context)=>{
     try{
         const book= await c.req.json()
